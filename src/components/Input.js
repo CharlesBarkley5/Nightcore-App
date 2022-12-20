@@ -28,7 +28,7 @@ function Input(props) {
                 type="text"
                 name="link"
                 placeholder="Paste link here"
-                style={{ fontSize: "16px", fontFamily: "Open Sans" }}
+                style={{ fontSize: "20px", fontFamily: "Open Sans",  }}
               />
             </label>
           </form>

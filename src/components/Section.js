@@ -20,7 +20,7 @@ function Section(props) {
         borderRadius: "15px",
         width: width,
         height: height,
-        margin: "0 auto" 
+        margin: "0 auto",
       }}
     >
       {props.children}

@@ -3,10 +3,13 @@ import Input from "./components/Input";
 import Bar from "./components/Bar";
 import { Navbar } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import classes from "./App.module.css";
+
+import Switch from "@mui/material/Switch";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import Slider from "@mui/material/Slider";
-import * as Tone from 'tone'
+import * as Tone from "tone";
 
 function App() {
   const [linkInput, setLinkInput] = useState(true);
@@ -43,46 +46,31 @@ function App() {
                   display: "inline",
                   margin: "auto",
                   fontWeight: "bold",
+                  color: linkInput ? "white" : "gray"
                 }}
               >
-                Download song from Youtube link
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Download song from Youtube link
               </p>
-              <input
-                type="radio"
-                value="link"
-                name="input"
-                style={{
-                  display: "inline",
-                  marginLeft: "auto",
-                  marginRight: "100px",
-                }}
-                checked={linkInput === true}
+              <Switch
+                color="default"
+                className={classes.switch}
                 onChange={inputChangeHandler}
-              />
+              ></Switch>
             </div>
             <br />
-            <div style={{ display: "flex", margin: "auto", padding: "5px" }}>
+            <div
+              style={{ display: "flex", padding: "15px", textAlign: "justify" }}
+            >
               <p
                 style={{
                   display: "inline",
                   margin: "auto",
                   fontWeight: "bold",
+                  color: linkInput ? "gray" : "white",
                 }}
               >
                 Upload audio file
               </p>
-              <input
-                type="radio"
-                value="file"
-                name="input"
-                style={{
-                  display: "inline",
-                  marginLeft: "auto",
-                  marginRight: "100px",
-                }}
-                checked={linkInput === false}
-                onChange={inputChangeHandler}
-              />
             </div>
           </form>
         </Section>
@@ -100,9 +88,11 @@ function App() {
         <AudioPlayer style={{ width: "50rem", margin: "auto" }} src="" />
         <br></br>
         <Section width="500px">
-          <div style={{padding: "30px", textAlign: "center", fontSize: "17px"}}>
-            <p style={{fontWeight: "bold"}}>Audio Settings</p>
-            <Slider sx={{color: "white"}}></Slider>
+          <div
+            style={{ padding: "30px", textAlign: "center", fontSize: "17px" }}
+          >
+            <p style={{ fontWeight: "bold" }}>Audio Settings</p>
+            <Slider sx={{ color: "white" }}></Slider>
           </div>
         </Section>
       </div>
