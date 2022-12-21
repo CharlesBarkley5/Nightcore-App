@@ -22,20 +22,22 @@ function Input(props) {
       <>
         <br></br> <br></br>
         <div style={{ textAlign: "center", padding: "10px" }}>
-          <form>
-            <label>
-              <input
-                type="text"
-                name="link"
-                placeholder="Paste link here"
-                style={{ fontSize: "20px", fontFamily: "Open Sans",  }}
-              />
-            </label>
-          </form>
+          <div style={{ height: "30px" }}>
+            <form>
+              <label>
+                <input
+                  type="text"
+                  name="link"
+                  placeholder="Paste link here"
+                  style={{ fontSize: "20px", fontFamily: "Poppins" }}
+                />
+              </label>
+            </form>
+          </div>
           <br></br>
           <br></br>
-          <button style={{ margin: "10px", width: "70px", height: "40px"}}>
-            <p style={{ margin: "auto", fontSize: "15px", fontWeight: "bold" }}>
+          <button style={{ margin: "10px", width: "80px", height: "50px" }}>
+            <p style={{ margin: "auto", fontSize: "22px", fontWeight: "bold" }}>
               Go
             </p>
           </button>
@@ -45,9 +47,11 @@ function Input(props) {
   } else {
     return (
       <div style={{ textAlign: "center", padding: "10px" }}>
-        <FilePond />
-        <button style={{ margin: "10px", width: "70px", height: "40px" }}>
-          <p style={{ margin: "auto", fontSize: "15px", fontWeight: "bold" }}>
+        <div style={{ height: "94px" }}>
+          <FilePond />
+        </div>
+        <button style={{ margin: "10px", width: "80px", height: "50px" }}>
+          <p style={{ margin: "auto", fontSize: "22px", fontWeight: "bold" }}>
             Go
           </p>
         </button>

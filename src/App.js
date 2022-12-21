@@ -75,7 +75,7 @@ function App() {
           </form>
         </Section>
         <br></br>
-        <Section width="500px">
+        <Section width="500px" height="180px">
           <Input linkInput={linkInput} />
         </Section>
         <br></br>
