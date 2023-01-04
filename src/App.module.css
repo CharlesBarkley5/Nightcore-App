@@ -1,5 +1,10 @@
 .switch {
-    transform: rotate(90deg) translateY(-100%);
-    transform-origin:top left;
-    scale: 1.7;
-  }
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
+  scale: 1.7;
+}
+
+.changeColor:hover {
+  color: #D4D4D4;
+}
+
